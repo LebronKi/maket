@@ -2,7 +2,7 @@
     max-width: 1550px;
     margin: 0 auto;
     background: #F6F6F6;
-    border: 3px solid red;
+    border: 2px solid rgb(203, 169, 231);
     font-family: Poppins;
     padding: 0 15px 290px 15px;
 
@@ -31,6 +31,9 @@
     li{
         margin: 0 10px;
     }
+}
+#burger{
+    display: none;
 }
 h1{
     max-width: 736px;
@@ -69,3 +72,100 @@ h1{
     top: 0;
     right:0;
  }
+ @media (min-width:320px) and (max-width:425px) {
+    .header__container{
+        padding: 0 15px;
+    }
+    .header__image{
+        display: none;
+    }
+    .header__row{
+        position: relative;
+        margin: 30px 0 50px 0;
+        img{
+            object-fit: cover;
+            max-width: 100% ;
+        }
+    }
+    h1{
+        font-size: 39px;
+    }
+    .header__text{
+        text-align: center;
+    }
+    .header__discr{
+        font-size: 20px;
+    }
+    .header__btn,
+    .header__button{
+        padding: 20px 50px;
+        margin: 15px 0;
+        border: 3px solid #588535;
+    }
+    .burger{
+       display: block;
+        width: 30px;
+        height: 2px;
+        background: #588535;
+        position: relative;
+    }
+    .burger::before,
+    .burger::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: block;
+        height: 2px;
+        background: #588535;
+    }
+    .burger::before{
+        top: -10px;
+    }
+    .burger::after{
+        top: 10px;
+    }
+    .close{
+        display: block;
+        width: 30px;
+        height: 2px;
+        background: #588535;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        transform: rotate(45deg);
+     }
+    .close::after{
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background: #588535;
+        transform: rotate(90deg);
+    }
+    .header__list-sec{
+        display: none;
+    }
+    .header__list{  
+        display: block;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: coral;
+        transform: translate(0%);
+        transition: transform 0.4s;
+        li{
+            margin: 50px 0 30px;
+            text-align: center;
+        &:last-child{
+            margin: 50px 0 0 0  ;
+        }
+        }
+    }
+    .header__list.close {
+        transform: translate(100%);
+    }
+
+}

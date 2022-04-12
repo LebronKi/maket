@@ -2,7 +2,8 @@ header.header
     .header__container
         .header__row
             img(src="./assets/imgs/logo.png", alt="logo")
-            ul.header__list 
+            span#close.close
+            ul#menu.header__list.close(onclick='closeMenu')
                 li home
                 li products
                 li contact
@@ -13,11 +14,11 @@ header.header
                 li
                     img(src="./assets/imgs/korzina.png ", alt="")
                 li
-                   img(src="./assets/imgs/user.png ", alt="")  
+                   img(src="./assets/imgs/user.png ", alt="")
+            span#open.burger      
             img(src="./assets/imgs/green.png", alt="").header__image    
         .header__text
             h1 Various Indoor Plant Shop
             p.header__discr Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
             button.header__button  Add To Cart
             button.header__btn    Learn More
-

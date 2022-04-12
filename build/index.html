@@ -10,8 +10,8 @@
   <body>
     <header class="header">
       <div class="header__container">
-        <div class="header__row"><img src="./assets/imgs/logo.png" alt="logo">
-          <ul class="header__list"> 
+        <div class="header__row"><img src="./assets/imgs/logo.png" alt="logo"><span class="close" id="close"></span>
+          <ul class="header__list close" id="menu" onclick="closeMenu">
             <li>home</li>
             <li>products</li>
             <li>contact</li>
@@ -21,7 +21,7 @@
             <li><img src="./assets/imgs/search.png" alt=""></li>
             <li><img src="./assets/imgs/korzina.png " alt=""></li>
             <li><img src="./assets/imgs/user.png " alt=""></li>
-          </ul><img class="header__image" src="./assets/imgs/green.png" alt="">
+          </ul><span class="burger" id="open">     </span><img class="header__image" src="./assets/imgs/green.png" alt="">
         </div>
         <div class="header__text">
           <h1>Various Indoor Plant Shop</h1>
@@ -31,5 +31,6 @@
         </div>
       </div>
     </header>
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>
